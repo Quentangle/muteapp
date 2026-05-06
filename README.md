@@ -1,5 +1,9 @@
 # muteapp
 
+<p align="center">
+  <img src="docs/popover.png" alt="muteapp popover" width="320">
+</p>
+
 Tiny native macOS menu-bar app that toggles your microphone with a global hotkey. A free, Apple-Silicon-native replacement for the abandoned [mutekey](https://github.com/cdzombak/mutekey).
 
 - Global hotkey (default ⌃⌥⌘M, configurable)
