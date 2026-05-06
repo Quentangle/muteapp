@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3B2A78"/>
+      <stop offset="100%" stop-color="#6E5BFF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#34D399" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#34D399" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+
+  <!-- macOS-style continuous-curvature rounded square (approximate via large radius) -->
+  <rect x="0" y="0" width="1024" height="1024" rx="228" ry="228" fill="url(#bg)"/>
+
+  <!-- subtle inner highlight at top -->
+  <rect x="0" y="0" width="1024" height="1024" rx="228" ry="228"
+        fill="white" fill-opacity="0.04"/>
+
+  <!-- green glow halo behind the mic -->
+  <circle cx="512" cy="500" r="280" fill="url(#glow)" filter="url(#soft)"/>
+
+  <!-- ring -->
+  <circle cx="512" cy="500" r="232" fill="none" stroke="#34D399" stroke-width="10" stroke-opacity="0.85"/>
+
+  <!-- microphone glyph (capsule body + stand + base) -->
+  <g fill="white">
+    <!-- capsule body -->
+    <rect x="448" y="320" width="128" height="280" rx="64" ry="64"/>
+    <!-- U-shape outline (using two rects for stand cradle hint) -->
+    <path d="M 380 480
+             a 132 132 0 0 0 264 0
+             v 30
+             a 132 132 0 0 1 -264 0 z"
+          fill="white" fill-opacity="0.0"/>
+    <!-- subtle cradle line -->
+    <path d="M 372 478
+             a 140 140 0 0 0 280 0"
+          fill="none" stroke="white" stroke-width="14" stroke-linecap="round" stroke-opacity="0.95"/>
+    <!-- stand -->
+    <rect x="498" y="618" width="28" height="82" rx="10"/>
+    <!-- base -->
+    <rect x="416" y="694" width="192" height="26" rx="13"/>
+  </g>
+</svg>
